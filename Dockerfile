@@ -1,9 +1,9 @@
 FROM alpine:3.11.2 as builder
 
-RUN echo "Building up image for project template_project_name"
+RUN echo "Building up image for project gundeck-action"
 
-COPY . /template_project_name
+COPY . /gundeck-action
 
-WORKDIR /template_project_name
+WORKDIR /gundeck-action
 
 ENTRYPOINT echo "Hello world"

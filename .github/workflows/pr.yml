@@ -13,11 +13,11 @@ jobs:
       - name: Docker Build
         uses: tradeshift/actions-docker-gcr/build@master
         env:
-          IMAGE: tradeshift-base/template_project_name
+          IMAGE: tradeshift-base/gundeck-action
           GCLOUD_SERVICE_ACCOUNT_KEY: ${{ secrets.GCLOUD_SERVICE_ACCOUNT_KEY }}
 
       - name: Docker Push 
         uses: tradeshift/actions-docker-gcr/push@master
         env:
-          IMAGE: tradeshift-base/template_project_name
+          IMAGE: tradeshift-base/gundeck-action
           GCLOUD_SERVICE_ACCOUNT_KEY: ${{ secrets.GCLOUD_SERVICE_ACCOUNT_KEY }}

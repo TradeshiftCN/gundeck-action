@@ -1,7 +1,7 @@
-# template_project_name
+# gundeck-action
 
 #### About this project
-template_description  
+Github action for triggering Rundeck jobs  
 
 #### Getting Started
 Tutorial on what it is needed for first execution, including softwares that must be pre-installed.
