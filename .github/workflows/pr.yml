@@ -1,0 +1,23 @@
+name: Pull Request
+
+on:
+  pull_request:
+    types: [opened, reopened, edited, synchronize]
+
+jobs:
+  build:
+    runs-on: self-hosted
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Docker Build
+        uses: tradeshift/actions-docker-gcr/build@master
+        env:
+          IMAGE: tradeshift-base/template_project_name
+          GCLOUD_SERVICE_ACCOUNT_KEY: ${{ secrets.GCLOUD_SERVICE_ACCOUNT_KEY }}
+
+      - name: Docker Push 
+        uses: tradeshift/actions-docker-gcr/push@master
+        env:
+          IMAGE: tradeshift-base/template_project_name
+          GCLOUD_SERVICE_ACCOUNT_KEY: ${{ secrets.GCLOUD_SERVICE_ACCOUNT_KEY }}
