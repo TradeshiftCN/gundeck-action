@@ -1,0 +1,9 @@
+name: 'Rundeck trigger'
+description: 'Trigger rundeck jobs from Github actions'
+author: 'Soren Mathiasen'
+runs:
+  using: 'docker'
+  image: 'docker://eu.gcr.io/tradeshift-public/gundeck-action:1.0.0'
+branding:
+  icon: 'check-square'
+  color: 'blue'
